@@ -1,10 +1,4 @@
-/* CSci4061 Fall 2016 Assignment 4
-* Name: Kenton Smith, Derek Spaulding, Derek Goodwin
-* X500: smit7519, spaul048, goodw171
-* ID: 4380739, 4994234, 3862569
-*/
-
-How to Complie Our Program:
+How to Complie the Program:
   
   module unload soft/gcc
   
