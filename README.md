@@ -41,7 +41,3 @@ How to Access Files Accross a Network/Locally:
 How our program works:
 
   Our program creates a server with specifications mentioned above. First we validate that all arguments are correct. We then create a web server log which you can view in the main directory called web_server_log. We then create worker and dispatcher threads then pthread_exit out of the main method. Dispatcher threads get a connection and if it is valid, put the request information in a bounded buffer that uses locks and condiditon variables. The worker threads remove work from the bounded buffer and try to open the file in the request. If there are bytes to write back, we call return_result. Otherwise, we call return_error with file not found. Once this is done we call the thread_safe_log_message function to add a log to the log file in the format [ThreadID#][Request#][fd][Request string][bytes/error] . The thread_safe_log_message function uses its own lock to ensure that two worker threads do not write at the same time.
-
-Contributions:
-
-  All group members met for all scheduled meetings, performed testing, monitored github and communicated effectively/frequently. Derek G implemented the thread_safe_log_message function and wrote documentation. Derek S performed extensive testing to ensure we were freeing everything that was malloc'd and closed file desrciptors and fixed these issues. Kenton S implemented dispatcher and worker thread functions, and parsed input from the main method. We all performed rigorous testing towards our server locally and across platforms.
